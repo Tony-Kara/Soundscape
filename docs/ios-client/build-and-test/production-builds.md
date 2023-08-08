@@ -9,3 +9,7 @@ Every time you run fastlane, use `bundle exec fastlane [lane]`.
 ## Updating fastlane
 
 To update fastlane, just run `bundle update fastlane` from the `ios` directory.
+
+## Creating builds
+
+To create a new build and push to TestFlight, run: `bundle exec fastlane beta`
