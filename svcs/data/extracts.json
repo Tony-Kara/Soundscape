@@ -4,6 +4,11 @@
     "url": "http://download.geofabrik.de/australia-oceania/australia-latest.osm.pbf",
     "bbox": []
     },
+	{
+	"name": "district-of-columbia",
+	"url": "http://download.geofabrik.de/north-america/us/district-of-columbia-latest.osm.pbf",
+	"bbox": [38.755422, -77.243156, 39.008247, -76.842155]
+	},
     {
     "name": "new-zealand",
     "url": "http://download.geofabrik.de/australia-oceania/new-zealand-latest.osm.pbf",

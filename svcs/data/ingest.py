@@ -220,7 +220,7 @@ def execute_kube_updatemodel_provision_and_import(config, updated):
 
         try:
             logger.info('Importing to "{0}"'.format(d['name']))
-            args.dsn = kube.get_url_dsn(d['dsn2']) + '?sslmode=require'
+            args.dsn = kube.get_url_dsn(d['dsn2']) #+ '?sslmode=require'
             import_write(config, False)
             import_rotate(config, False)
             provision_database_soundscape(d['dsn2'])
@@ -289,8 +289,8 @@ def execute_kube_updatemodel(config):
     #      since import of new data can/will take a while
     if config.dynamic_db:
         execute_kube_sync_database_services(config)
-
-    rescan_delay = 3600
+    # testing refresh delay changing from 60 to 120
+    rescan_delay = 120
     initial_import = True
     while True:
         fetch_delay = config.delay

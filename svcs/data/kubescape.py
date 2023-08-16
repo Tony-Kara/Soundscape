@@ -1,6 +1,7 @@
 """
 This is a minimal shim to replace missing code referenced by ingest.py.
 """
+## Code copied from: https://github.com/soundscape-community/soundscape
 import os
 from psycopg2.extensions import make_dsn, parse_dsn
 
