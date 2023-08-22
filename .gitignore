@@ -1,7 +1,8 @@
 # Mac OS X
 *.DS_Store
 
-
+# Ignore Xcode config with credentials
+*.xcworkspace
 # Xcode
 *.pbxuser
 *.mode2v3
@@ -25,6 +26,11 @@ AppStoreBuild
 # Ignore MS Office scratch files
 */~$*
 
+# Ignore secrets
+.env
+*.pem
+*credentials*
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -34,7 +40,7 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
-
+bin/
 # Windows Installer files
 *.cab
 *.msi
