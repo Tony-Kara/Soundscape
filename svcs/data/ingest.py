@@ -16,6 +16,10 @@ import psycopg2
 
 from kubescape import SoundscapeKube
 
+# debugger
+# import debugpy
+# debugpy.listen(("0.0.0.0", 5678))
+
 dsn_default_base = 'host=localhost '
 dsn_init_default = dsn_default_base + 'dbname=postgres'
 dsn_default = dsn_default_base + 'user=osm password=osm dbname=osm'
@@ -292,6 +296,9 @@ def execute_kube_updatemodel(config):
     if config.dynamic_db:
         execute_kube_sync_database_services(config)
     # testing refresh delay changing from 60 to 120
+    # further testing. set the loop time to 86400 in docker compose so should fetch extracts
+    # from Geofabrik every 24 hours. Changing the rescan delay to 86400 so should sleep for
+    # 24 hours and only update the db every 24hrs.
     rescan_delay = 120
     initial_import = True
     while True:
