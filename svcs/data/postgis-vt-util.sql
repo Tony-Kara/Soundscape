@@ -685,4 +685,3 @@ select
   end;
 $func$;
 
-
