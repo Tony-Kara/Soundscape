@@ -877,3 +877,9 @@ extension SpatialDataContext {
     }
     
 }
+
+extension SpatialDataContext {
+    public func fetchSamplePOIs(searchDistance: CLLocationDistance = SpatialDataContext.initialPOISearchDistance) -> SpatialDataViewProtocol? {
+        return getDataView(for: .sample, searchDistance: searchDistance)
+    }
+}

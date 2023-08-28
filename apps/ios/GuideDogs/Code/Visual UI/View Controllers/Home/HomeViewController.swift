@@ -763,17 +763,16 @@ private extension UIAlertController {
 
         alertController.addAction(
             UIAlertAction(
-                title: GDLocalizedString("general.alert.continue"),
-                style: .default) {_ in
+                title: GDLocalizedString("general.alert.settings"),
+                style: .cancel) {_ in
+                    HomeViewController.openDeviceSetting()
                 })
 
         alertController.addAction(
             UIAlertAction(
-                title: GDLocalizedString("general.alert.open_settings"),
+                title: GDLocalizedString("general.alert.continue"),
                 style: .default) {_ in
-                    HomeViewController.openDeviceSetting()
                 })
         return alertController
     }
-    
 }

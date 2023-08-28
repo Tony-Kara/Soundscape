@@ -189,17 +189,25 @@ class SearchTableViewController: BaseTableViewController {
     /// Private method used by a custom accessibility action that allows for jumping straight to saving
     /// the current location as a marker without loading the Location Details screen
     private func saveCurrentLocation() {
-        guard let location = AppContext.shared.geolocationManager.location else {
-            self.present(ErrorAlerts.buildLocationAlert(), animated: true, completion: nil)
-            return
+        var detail: LocationDetail
+
+        if let location = AppContext.shared.geolocationManager.location {
+            detail = LocationDetail(location: location, telemetryContext: "current_location")
+        } else {
+            detail = LocationDetail(location: CLLocation.sample, telemetryContext: "current_location")
         }
+
+//        guard let location = AppContext.shared.geolocationManager.location else {
+//            self.present(ErrorAlerts.buildLocationAlert(), animated: true, completion: nil)
+//            return
+//        }
         
         if let dataSource = tableViewDataSource as? SearchTableDataSource {
             dataSource.showCurrentLocationActivityIndicator = true
             tableView.reloadData()
         }
         
-        let detail = LocationDetail(location: location, telemetryContext: "current_location")
+//        let detail = LocationDetail(location: location, telemetryContext: "current_location")
         
         // If the location is not a marker, try to fetch an estimated name and
         // address, if necessary
@@ -255,18 +263,26 @@ extension SearchTableViewController: TableViewSelectDelegate {
                 GDATelemetry.track("poi_selected.current_location", with: ["context": self.delegate?.usageLog ?? ""])
                 
                 // Selected current location cell
-                guard let location = AppContext.shared.geolocationManager.location else {
-                    self.present(ErrorAlerts.buildLocationAlert(), animated: true, completion: nil)
-                    return
+                var detail: LocationDetail
+
+                if let location = AppContext.shared.geolocationManager.location {
+                    detail = LocationDetail(location: location, telemetryContext: "current_location")
+                } else {
+                    detail = LocationDetail(location: CLLocation.sample, telemetryContext: "current_location")
                 }
+
+//                guard let location = AppContext.shared.geolocationManager.location else {
+//                    self.present(ErrorAlerts.buildLocationAlert(), animated: true, completion: nil)
+//                    return
+//                }
                 
                 // Dismiss `UISearchResultsController`
                 self.searchController?.isActive = false
                 
                 if let delegate = self.delegate {
-                    delegate.didSelect(currentLocation: location)
+                    delegate.didSelect(currentLocation: detail.location)
                 } else {
-                    let detail = LocationDetail(location: location, telemetryContext: "current_location")
+//                    let detail = LocationDetail(location: location, telemetryContext: "current_location")
                     self.performSegue(withIdentifier: "LocationDetailView", sender: detail)
                 }
             }

@@ -11,6 +11,9 @@
 /* Title for button to dismiss alert */
 "general.alert.dismiss" = "Dismiss";
 
+/* Title for button to open settings from alert */
+"general.alert.settings" = "Settings";
+
 /* Title for a button that allows a user to skip a step */
 "general.alert.skip" = "Skip";
 
@@ -96,10 +99,14 @@
 "general.alert.discard" = "Discard";
 
 /* Alert action to give options when location access is denied */
-"location.denied.options.title" = "No Accuracy Location Permisssion";
+"location.denied.options.title" = "Enable Location Services";
 
 /* Alert action messages to give options when location access is denied */
-"location.denied.options.message" = "It appears that your privacy settings are preventing the use of accurate location services. To enable accurate location access, please adjust the settings in your device's setting";
+"location.denied.options.message" = "It appears that your privacy settings are preventing the use of location services.
+
+To enable full app functionality, please adjust your device settings.
+
+Alternatively, you may continue previewing the app with a predefined test location.";
 
 /* Clear text from a text field */
 "general.text.clear_text" = "Clear text";

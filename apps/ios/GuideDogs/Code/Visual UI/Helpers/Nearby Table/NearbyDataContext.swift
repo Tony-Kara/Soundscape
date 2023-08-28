@@ -32,16 +32,13 @@ class NearbyDataContext {
     
     // MARK: Initialization
     
-    init(location: CLLocation? = AppContext.shared.geolocationManager.location) {
+    init(location: CLLocation) {
         self.location = location
         
         let initialDataValue = NearbyData(pois: [], filters: NearbyTableFilter.primaryTypeFilters)
         data = .init(initialDataValue)
-        
-        // Fetch nearby data
-        let dataView = AppContext.shared.spatialDataContext.getCurrentDataView { (dataView) -> Bool in
-            return dataView.pois.count < 100
-        }
+
+        let dataView = fetchNearbyData()
         
         if let dataView = dataView {
             pois = dataView.pois
@@ -49,5 +46,14 @@ class NearbyDataContext {
         
         data.send(NearbyData(pois: pois, filters: NearbyTableFilter.defaultFilters))
     }
-    
+
+    private func fetchNearbyData() -> SpatialDataViewProtocol? {
+        if self.location == CLLocation.sample {
+            return AppContext.shared.spatialDataContext.fetchSamplePOIs()
+        } else {
+            return AppContext.shared.spatialDataContext.getCurrentDataView { (dataView) -> Bool in
+                return dataView.pois.count < 100
+            }
+        }
+    }
 }

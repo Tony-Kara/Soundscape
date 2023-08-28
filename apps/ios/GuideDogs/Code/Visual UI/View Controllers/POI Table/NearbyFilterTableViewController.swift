@@ -20,13 +20,23 @@ class NearbyFilterTableViewController: UITableViewController, POITableViewContro
     // MARK: Properties
     
     weak var delegate: POITableViewDelegate?
-    private var context = NearbyDataContext()
+    private var context: NearbyDataContext = setupContext()
     private var data: NearbyData?
     private var subscriber: AnyCancellable?
     var onDismissPreviewHandler: (() -> Void)?
     
     // MARK: View Life Cycle
-    
+
+    static func setupContext() -> NearbyDataContext {
+        if AppContext.shared.geolocationManager.coreLocationServicesEnabled {
+            if let location = AppContext.shared.geolocationManager.location {
+                return NearbyDataContext(location: location)
+            }
+        }
+
+        return NearbyDataContext(location: CLLocation.sample)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
