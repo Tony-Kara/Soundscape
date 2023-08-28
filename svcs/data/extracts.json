@@ -100,13 +100,8 @@
 	"bbox": []
 	},
 	{
-	"name": "bristol",
-	"url": "http://download.geofabrik.de/europe/great-britain/england/bristol-latest.osm.pbf",
-	"bbox": []
-	},
-	{
-	"name": "somerset",
-	"url": "http://download.geofabrik.de/europe/great-britain/england/somerset-latest.osm.pbf",
+	"name": "planet",
+	"url": "https://download.bbbike.org/osm/planet/planet-latest.osm.pbf",
 	"bbox": []
 	}
 ]
