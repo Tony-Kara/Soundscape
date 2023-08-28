@@ -95,6 +95,12 @@
 /* Alert action to discard changes */
 "general.alert.discard" = "Discard";
 
+/* Alert action to give options when location access is denied */
+"location.denied.options.title" = "No Accuracy Location Permisssion";
+
+/* Alert action messages to give options when location access is denied */
+"location.denied.options.message" = "It appears that your privacy settings are preventing the use of accurate location services. To enable accurate location access, please adjust the settings in your device's setting";
+
 /* Clear text from a text field */
 "general.text.clear_text" = "Clear text";
 
