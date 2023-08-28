@@ -48,12 +48,10 @@ class NearbyDataContext {
     }
 
     private func fetchNearbyData() -> SpatialDataViewProtocol? {
-        if self.location == CLLocation.sample {
+        guard AppContext.shared.geolocationManager.isAuthorized else {
             return AppContext.shared.spatialDataContext.fetchSamplePOIs()
-        } else {
-            return AppContext.shared.spatialDataContext.getCurrentDataView { (dataView) -> Bool in
-                return dataView.pois.count < 100
-            }
         }
+
+        return AppContext.shared.spatialDataContext.getCurrentDataView { $0.pois.count > 100 }
     }
 }

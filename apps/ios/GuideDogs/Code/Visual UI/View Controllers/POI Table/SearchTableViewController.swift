@@ -189,33 +189,36 @@ class SearchTableViewController: BaseTableViewController {
     /// Private method used by a custom accessibility action that allows for jumping straight to saving
     /// the current location as a marker without loading the Location Details screen
     private func saveCurrentLocation() {
-        var detail: LocationDetail
+        let detail = fetchLocationDetail()
 
-        if let location = AppContext.shared.geolocationManager.location {
-            detail = LocationDetail(location: location, telemetryContext: "current_location")
-        } else {
-            detail = LocationDetail(location: CLLocation.sample, telemetryContext: "current_location")
+        guard let detail else {
+            self.present(ErrorAlerts.buildLocationAlert(), animated: true, completion: nil)
+            return
         }
-
-//        guard let location = AppContext.shared.geolocationManager.location else {
-//            self.present(ErrorAlerts.buildLocationAlert(), animated: true, completion: nil)
-//            return
-//        }
         
         if let dataSource = tableViewDataSource as? SearchTableDataSource {
             dataSource.showCurrentLocationActivityIndicator = true
             tableView.reloadData()
         }
-        
-//        let detail = LocationDetail(location: location, telemetryContext: "current_location")
-        
+
         // If the location is not a marker, try to fetch an estimated name and
         // address, if necessary
         LocationDetail.fetchNameAndAddressIfNeeded(for: detail) { [weak self] (newValue) in
             self?.didSelectLocationAction(.save(isEnabled: true), detail: newValue)
         }
     }
-    
+
+    private func fetchLocationDetail() -> LocationDetail? {
+        guard AppContext.shared.geolocationManager.isAuthorized else {
+            return LocationDetail(location: CLLocation.sample, telemetryContext: "current_location")
+        }
+
+        guard let location = AppContext.shared.geolocationManager.location else {
+            return nil
+        }
+
+        return LocationDetail(location: location, telemetryContext: "current_location")
+    }
 }
 
 extension SearchTableViewController: SearchResultsTableViewControllerDelegate {
