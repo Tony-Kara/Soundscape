@@ -61,7 +61,7 @@
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>AppName uses Bluetooth LE to connect to accessories.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>AppName uses your location to provide you with relevant information about your surroundings.</string>
+	<string>Soundscape uses your location to provide you with relevant information about your surroundings.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>AppName uses your location to provide you with relevant information about your surroundings.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
