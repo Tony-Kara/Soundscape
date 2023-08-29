@@ -371,21 +371,13 @@ extension AppContext: GeolocationManagerSnoozeDelegate {
 }
 
 extension AppContext {
-    
-    // TODO: Update the following links with your URLs
-    
     struct Links {
-        static func privacyPolicyURL(for locale: Locale) -> URL {
-            return URL(string: "INSERT PRIVACY POLICY URL HERE")!
-        }
-        
-        static func servicesAgreementURL(for locale: Locale) -> URL {
-            return URL(string: "https://google.com")!
-        }
-    
-        static let companySupportURL = URL(string: "INSERT SUPPORT URL HERE")!
-        
-        static let accessibilityFrance = URL(string: "INSERT ACCESSIBILITY STATEMENT URL HERE")!
+        // Added fallback whilst there is no error handling for unwrapping URLs
+        static let fallbackURL = URL(string: "https://google.com")!
+
+        static let privacyPolicyURL = URL(string: "https://tfga.ngo/SSPrivacy") ?? fallbackURL
+        static let servicesAgreementURL = URL(string: "https://tfga.ngo/SSServices") ?? fallbackURL
+        static let companySupportURL = URL(string: "https://tfga.ngo/SSsupport") ?? fallbackURL
+        static let accessibilityFrance = URL(string: "https://tfga.ngo/SSAccessibility") ?? fallbackURL
     }
-    
 }
