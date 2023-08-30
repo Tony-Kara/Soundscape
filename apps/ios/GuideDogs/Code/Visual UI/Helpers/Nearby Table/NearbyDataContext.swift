@@ -54,4 +54,13 @@ class NearbyDataContext {
 
         return AppContext.shared.spatialDataContext.getCurrentDataView { $0.pois.count > 100 }
     }
+
+    static func fetchLocationContext() -> NearbyDataContext {
+        guard
+            AppContext.shared.geolocationManager.isAuthorized,
+            let location = AppContext.shared.geolocationManager.location else {
+            return NearbyDataContext(location: CLLocation.sample)
+        }
+        return NearbyDataContext(location: location)
+    }
 }
