@@ -40,7 +40,7 @@ class ServiceModel {
     private static let productionVoicesHostName = "https://yourstaticblobstore"
     
     static var learningResourcesWebpage: URL {
-        return URL(string: productionAssestsHostName + "/externalcontent/soundscape_learning_resources.html")!
+        return URL(string: "https://tfga.ngo/SSBlog")!
     }
 
     static var servicesHostName: String {
