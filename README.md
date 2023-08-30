@@ -43,3 +43,8 @@ The open source project contains three components:
 # Trademark Notice
 
 Trademarks This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow Microsoft’s Trademark & Brand Guidelines. Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party’s policies.
+
+# Developer Notes
+
+To get new project team members up and running this should include details of how you spin up a dev environment
+
