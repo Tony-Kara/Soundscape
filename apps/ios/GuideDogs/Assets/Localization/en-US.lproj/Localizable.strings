@@ -294,6 +294,22 @@
 /* Notification to authorize motion and fitness activity on the device. Keep newlines (\n) between sentences. Ensure that "Motion & Fitness" is translated the same as `device_motion.title`. {NumberedPlaceholder="\n"} */
 "device_motion.authorize.instructions" = "1. Open the Settings app below\n2. Turn on Motion & Fitness Tracking";
 
+// ------------------------------------------------------------------------------
+// MARK: - Supported email clients
+// ------------------------------------------------------------------------------
+
+/* String indicating the system-default mail client on iOS */
+"mail.default" = "Default";
+
+/* Translated string for Gmail */
+"mail.gmail" = "Gmail";
+
+/* Translated name string for Outlook */
+"mail.msoutlook" = "Microsoft Outlook";
+
+/* Translated string for Yahoo Mail */
+"mail.yahoo" = "Yahoo Mail";
+
 //------------------------------------------------------------------------------
 // MARK: - Settings
 //------------------------------------------------------------------------------
@@ -338,7 +354,7 @@
 "settings.feedback.subject" = "Soundscape Feedback";
 
 /* Prompt that is asking the user to select an email application from the list of email apps they have installed on their phone. */
-"settings.feedback.choose_email_app" = "Choose a mail app:";
+"settings.feedback.choose_email_app" = "Choose an email app:";
 
 /* Warning that informs the user that they do not have any mail apps installed. This is displayed when the user taps the button to provide us with feedback. */
 "settings.feedback.no_mail_client_error" = "No mail app installed";
