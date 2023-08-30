@@ -89,7 +89,7 @@ Additional personalization options:
   * `Primary App Icon Set Name`
   * `BUNDLE_SPOKEN_NAME`
 * In `AppContext.swift` you can change the following properties:
-  * `appDisplayName`
-  * `appStoreId`
-* Do a general search and replace instances of `CompanyName` and `AppName`.
+  * ~~`appDisplayName`~~
+  * ~~`appStoreId`~~
+* ~~Do a general search and replace instances of `CompanyName` and `AppName`.~~
 * Do a general search for `TODOs` and make changes as needed.

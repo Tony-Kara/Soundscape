@@ -39,10 +39,10 @@ class AppContext {
     
     static let shared = AppContext()
     
-    static let appDisplayName = "AppName"
+    static let appDisplayName = "Soundscape"
     static let appVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     static let appBuild = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
-    static let appStoreId = "1240320677"
+    static let appStoreId = "6459021379"
 
     static var appState: UIApplication.State = .inactive
     static let appLaunchedInBackground: Bool = UIApplication.shared.applicationState == .background
@@ -372,20 +372,18 @@ extension AppContext: GeolocationManagerSnoozeDelegate {
 
 extension AppContext {
     
-    // TODO: Update the following links with your URLs
-    
     struct Links {
         static func privacyPolicyURL(for locale: Locale) -> URL {
-            return URL(string: "INSERT PRIVACY POLICY URL HERE")!
+            return URL(string: "https://tfga.ngo/SSPrivacy")!
         }
         
         static func servicesAgreementURL(for locale: Locale) -> URL {
-            return URL(string: "https://soundscape.scottishtecharmy.org/")!
+            return URL(string: "https://tfga.ngo/SSServices")!
         }
     
-        static let companySupportURL = URL(string: "INSERT SUPPORT URL HERE")!
+        static let companySupportURL = URL(string: "https://tfga.ngo/sssupport")!
         
-        static let accessibilityFrance = URL(string: "INSERT ACCESSIBILITY STATEMENT URL HERE")!
+        static let accessibilityFrance = URL(string: "https://tfga.ngo/SSAccessibility")!
     }
     
 }

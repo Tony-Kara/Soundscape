@@ -33,13 +33,13 @@ class ServiceModel {
     /// String for identifying errors that originate from Realm
     static let errorRealm = "GDAHTTPErrorRealm"
     
-    private static let productionServicesHostName = "https://soundscape-production.yourservicesdomain.com"
+    private static let productionServicesHostName = "https://soundscape.scottishtecharmy.org"
     private static let productionAssestsHostName = "https://yourstaticblobstore"
     // Do not change `productionVoicesHostName`!
     private static let productionVoicesHostName = "https://yourstaticblobstore"
     
     static var learningResourcesWebpage: URL {
-        return URL(string: productionAssestsHostName + "/externalcontent/soundscape_learning_resources.html")!
+        return URL(string: "https://tfga.ngo/SSBlog")!
     }
 
     static var servicesHostName: String {
