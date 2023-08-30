@@ -378,7 +378,7 @@ extension AppContext {
         }
         
         static func servicesAgreementURL(for locale: Locale) -> URL {
-            return URL(string: "https://google.com")!
+            return URL(string: "https://tfga.ngo/SSServices")!
         }
     
         static let companySupportURL = URL(string: "https://tfga.ngo/sssupport")!
