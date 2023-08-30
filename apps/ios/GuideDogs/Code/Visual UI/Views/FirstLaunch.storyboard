@@ -37,7 +37,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wpe-rU-LYI" userLabel="Terms of Use" customClass="RoundedTextView" customModule="Soundscape" customModuleProvider="target">
                                         <rect key="frame" x="32" y="77.5" width="311" height="333.5"/>
                                         <color key="backgroundColor" red="0.1019607843" green="0.14901960780000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <string key="text">Your use of AppName is subject to the terms of the Company Services Agreement. Please check the box below to agree and continue.</string>
+                                        <string key="text">Your use of Soundscape is subject to the terms of the Company Services Agreement. Please check the box below to agree and continue.</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -269,7 +269,7 @@
                                             <constraint firstAttribute="width" secondItem="mol-S8-f1K" secondAttribute="height" multiplier="375:172" id="5tW-MW-lgr"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppName is a location-based app. We use your location to find and call out things around you." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frC-1Z-Paz" userLabel="Description">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soundscape is a location-based app. We use your location to find and call out things around you." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frC-1Z-Paz" userLabel="Description">
                                         <rect key="frame" x="32" y="286.5" width="311" height="64.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -402,7 +402,7 @@
                                             <constraint firstAttribute="width" secondItem="HY3-8h-0SH" secondAttribute="height" multiplier="375:172" id="Ir6-2q-E2x"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This allows AppName to improve your experience based on whether you are walking, in a vehicle, or standing still." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yO5-9y-xDk" userLabel="Description">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This allows Soundscape to improve your experience based on whether you are walking, in a vehicle, or standing still." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yO5-9y-xDk" userLabel="Description">
                                         <rect key="frame" x="32" y="286.5" width="311" height="64.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
