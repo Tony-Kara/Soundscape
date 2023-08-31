@@ -42,7 +42,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RJ-f3-DYr" userLabel="Description">
-                                        <rect key="frame" x="16" y="193.66666666666669" width="361" height="86.333333333333314"/>
+                                        <rect key="frame" x="20" y="193.66666666666666" width="560" height="64.333333333333343"/>
                                         <string key="text">Soundscape uses your location to find and tell you about the places and things around you. The app needs your permission to use Location Services.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -180,7 +180,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUh-Ps-VHA" userLabel="Description">
-                                        <rect key="frame" x="16" y="227.66666666666669" width="361" height="174.33333333333331"/>
+                                        <rect key="frame" x="20" y="193.66666666666666" width="560" height="108.33333333333334"/>
                                         <string key="text">This allows Soundscape to improve your experience based on whether you are walking, in a vehicle, or standing still. The app needs your permission to use Motion &amp; Fitness. Before you authorize Soundscape to use this permission, you may need to enable Fitness Tracking under Settings → Privacy → Motion &amp; Fitness.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -324,7 +324,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Services are currently disabled. Soundscape cannot work when Location Services are turned off." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOC-0w-niP" userLabel="Description">
-                                        <rect key="frame" x="16" y="193.66666666666669" width="361" height="64.333333333333314"/>
+                                        <rect key="frame" x="20" y="193.66666666666666" width="560" height="42.333333333333343"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -460,7 +460,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motion &amp; Fitness tracking is currently disabled. Soundscape cannot work when Motion &amp; Fitness tracking is turned off." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4G-D9-w4A" userLabel="Description">
-                                        <rect key="frame" x="16" y="227.66666666666671" width="361" height="64.333333333333343"/>
+                                        <rect key="frame" x="20" y="193.66666666666666" width="560" height="42.333333333333343"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
