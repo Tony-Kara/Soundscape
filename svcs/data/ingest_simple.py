@@ -176,8 +176,8 @@ def connect_to_osmdb(dsn, config):
             # This deploys the .sql files onto the soundscape database
             provision_database_soundscape(dsn)
             # Once we've run everything we want to setup diffs              
-            # We want to get the diff file(s) and run Imposm (it writes the diffs to the production table). This is managed by the settings in config.json           
-            run_diffs(config)            
+            # We want to get the diff file(s) and run Imposm (it writes the diffs to the production table). This is managed by the settings in config.json
+            # run_diffs(config)
     
     except OperationalError as e:
         logger.warning('Unable to connect to "{0}: {1}": FAILED'.format(os.environ['POSTGIS_DBNAME'], e))  

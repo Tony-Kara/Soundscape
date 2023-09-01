@@ -46,7 +46,7 @@ services:
       # from the available downloads at http://download.geofabrik.de/
       # or you can modify GEN_REGIONS to accept multiple extracts like
       # GEN_REGIONS=somerset bristol
-      - GEN_REGIONS=district-of-columbia
+      - GEN_REGIONS=bristol
       #- LOOP_TIME=86400
       #- NAMESPACE=soundscape
       - POSTGIS_HOST=postgis
@@ -71,3 +71,19 @@ services:
     depends_on:
       postgis:
         condition: service_healthy
+
+  diff:
+      image: soundscape/diffs
+      build:
+        dockerfile: Dockerfile.diffs
+      environment:
+        - POSTGIS_HOST=postgis
+        - POSTGIS_PORT=5432
+        - POSTGIS_USER=postgres
+        - POSTGIS_PASSWORD=secret
+        - POSTGIS_DBNAME=osm
+      volumes:
+        - tiles:/tiles
+      depends_on:
+        postgis:
+          condition: service_healthy
